@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "typescript": "^4.7.4"
+  },
+  "name": "journal",
+  "description": "Making a journal-note taking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennedymahoro/Journal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennedymahoro/Journal/issues"
+  },
+  "homepage": "https://github.com/kennedymahoro/Journal#readme"
+}
