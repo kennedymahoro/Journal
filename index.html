@@ -17,8 +17,13 @@
             <button id="Nav-button">New Notes</button>
     </nav>
     <main>
-        <div class="Main-top-bar">
-            <input type="text" name="Main-Title" id="Main-input-title" data-main-input-title placeholder="Enter Title">
+        <div class="Main-top-form">
+            <div class="Main-input-div">
+            <input type="text" name="Main-Title" id="Main-input-title" data-main-input-title required autocomplete="off">
+            <label for="Main-Title" class="Main-lable-title">
+                <span class="Main-content-input-lable-title">Title</span>
+            </label>
+            </div>
             <h4>1:33 SAT JUNE 22</h4>
             <div class="Main-top-buttons">
                 <button id="Main-button-save">Save</button>

@@ -11,17 +11,14 @@ body{
     width: 100vw;
     height: 100vh;
     grid-gap: 5px;
-    background-color: black;
 }
 .Title-page{
     grid-column: 1 / span 2;
     height: 7vh;
-    background-color: white;
     display: flex;
     align-items: center;
 }
 nav{
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     grid-row: 2 / span 1;
@@ -29,7 +26,6 @@ nav{
 main{
     display: flex;
     flex-direction: column;
-    background-color: aqua;
 }
 textarea{
     height: 85vh;
@@ -42,15 +38,60 @@ textarea{
     border-style: none;
     height: 25px;
 }
-.Main-top-bar{
+.Main-top-form{
     display: flex;
     justify-content: space-between;
 }
-#Main-input-title{
-    margin-left: 5px; 
-    border-style: none;
-    border-radius: 0;
+.Main-input-div{
+    font-family: sans-serif;
+    position: relative;
+    width: 50%;
+    height: 50px;
+    overflow: hidden;
 }
+#Main-input-title{
+    color: #595f6e;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    padding-left: 4px;
+    width:100%;
+    height: 100%;
+}
+.Main-lable-title{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+.Main-lable-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid aqua;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+.Main-content-input-lable-title{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+#Main-input-title:focus + .Main-lable-title .Main-content-input-lable-title, #Main-input-title:valid + .Main-lable-title .Main-content-input-lable-title{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: aqua;
+}
+#Main-input-title:focus + .Main-lable-title::after, #Main-input-title:valid + .Main-lable-title::after{
+    transform: translateX(0%);
+} 
 .Main-top-buttons{
    margin-right: 5px; 
 
