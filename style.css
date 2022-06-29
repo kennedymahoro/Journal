@@ -1,5 +1,20 @@
 /* color pallet for this project*/
 /* https://coolors.co/dad7cd-a3b18a-588157-3a5a40-344e41 */
+:root{
+    --background: #fffff;
+    --save-btn: #60AFFF;
+    --title:  #000000;
+    --nav-btn: #28C2FF;
+    --main-txt-lb: #2AF5FF;
+    --main-txt-title: black;
+    --main-btn: #13293d;
+    --txt-color: white;
+    --time-color: black;
+    --textarea-background: #fffff;
+    --textarea-txt: #000000;
+    --nav-note:  #60AFFF;
+    --nave-background: white;
+}
 *{
     margin: 0;
     padding: 0;
@@ -10,26 +25,32 @@ body{
     grid-template: 5vh 95vh / 1fr 3fr;
     width: 100vw;
     height: 100vh;
-    background-color: #FBFFfb;
+    background-color: var(--background);
     position: fixed;
+    color: var(--txt-color);
 }
 .Title-page{
     grid-column: 1 / span 2;
     height: 5vh;
     display: flex;
-    color: #13293D;
+    color: var(--title);
     align-items: center;
-    border-bottom: 3px solid black;
-    font-family: sans-serif;
-    font-size: 20px;
+    justify-content: center;
+    border-bottom: 4px solid black;
+    font-size: 30px;
     padding-left: 5px;
 }
 nav{
     display: flex;
     flex-direction: column;
     grid-row: 2 / span 1;
-    color: #01BAEF;
+    color: var(--nav-note);
+    background-color: var(--nave-background);
     border-right: 5px solid black;
+    padding: 2px;
+}
+nav > h3{
+    border-bottom: 2px solid black;
 }
 main{
     display: flex;
@@ -46,12 +67,18 @@ textarea{
     padding: 5px;
     font-family: Georgia;
     font-size: 20px;
+    color: var(--textarea-txt);
+    background-color: var(--textarea-background);
+    
 }
 #Nav-button{
-    border-radius: 0;
-    margin-top: 1px;
+    border-radius: 9px;
+    margin-top: 5px;
     border-style: none;
-    height: 25px;
+    height: auto;
+    padding: 5px;
+    background-color: var(--nav-btn);
+    color: var(--txt-color);
 }
 .Main-top-form{
     display: flex;
@@ -59,15 +86,19 @@ textarea{
     align-items: center;
     height: 10vh;
 }
+.Main-top-form > h4{
+    color:var(--time-color); 
+}
 .Main-input-div{
     font-family: sans-serif;
     position: relative;
     width: 50%;
     height: 50px;
     overflow: hidden;
+    margin-left: 5px;
 }
 #Main-input-title{
-    color: #595f6e;
+    color: var(--main-txt-title);
     padding-top: 20px;
     border: none;
     outline: none;
@@ -91,32 +122,39 @@ textarea{
     bottom: -1px;
     width: 100%;
     height: 100%;
-    border-bottom: 1px solid #0CBABA;
+    border-bottom: 1px solid var(--main-txt-lb);
     transform: translateX(-100%);
     transition: all 0.3s ease;
+    color: var(--main-txt-lb);
 }
 .Main-content-input-lable-title{
     position: absolute;
     bottom: 5px;
     left: 0;
     transition: all 0.3s ease;
+    color: var(--main-txt-lb);
 }
 #Main-input-title:focus + .Main-lable-title .Main-content-input-lable-title, #Main-input-title:valid + .Main-lable-title .Main-content-input-lable-title{
     transform: translateY(-150%);
     font-size: 14px;
-    color: #0CBABA;
+    color: var(--main-txt-lb);
 }
 #Main-input-title:focus + .Main-lable-title::after, #Main-input-title:valid + .Main-lable-title::after{
+    color: var(--main-txt-lb);
     transform: translateX(0%);
 } 
 .Main-top-buttons{
     margin-right: 5px; 
 }
 .Main-top-buttons > button{
+    margin-top: 2px;
     border-style: none;
     border-radius: 0;
     width: 55px;
     height: 40px;
-    background-color: #13293D;
-    color: #FBFFF1;
+    background-color: var(--main-btn);
+    color: var(--txt-color);
+}
+#Main-button-save{
+    background-color: var(--save-btn);
 }
