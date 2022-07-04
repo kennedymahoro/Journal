@@ -71,7 +71,7 @@ textarea{
     background-color: var(--textarea-background);
     
 }
-#Nav-button{
+.Nav-button{
     border-radius: 9px;
     margin-top: 5px;
     border-style: none;
