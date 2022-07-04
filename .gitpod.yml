@@ -4,5 +4,6 @@
 
 tasks:
   - init: npm install
+        - npm i @types/node
 
 
