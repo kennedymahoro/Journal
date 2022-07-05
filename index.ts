@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from './node_modules/uuid';
+
 const Nav:HTMLElement = document.querySelector('nav') as HTMLElement;
 const Input_title:HTMLInputElement = document.querySelector('data-main-input-title') as HTMLInputElement;
 const Display_time:HTMLHeadElement = document.querySelector('data-display-time') as HTMLHeadElement;
@@ -6,13 +8,23 @@ const New_btn:HTMLButtonElement = document.querySelector('data-new-btn') as HTML
 const Delete_btn:HTMLButtonElement = document.querySelector('data-delete-btn') as HTMLButtonElement;
 const Textarea:HTMLTextAreaElement = document.querySelector('data-textarea') as HTMLTextAreaElement;
 
-class NewBtn{
-    this.date:string
-    constructor(title:string,date:string,text:string){
-
+class NewButton{
+    Id:string;
+    text:string;
+    title:string;
+    constructor(text:string,title:string){
+        this.Id = Date.now().toString();
+        this.text = text;
+        this.title = title;
     }
-    getID(){
-        return this.date;
+    getId(){
+        return this.Id;
+    }
+    createButton(){
+        const Button:HTMLButtonElement = document.createElement('button')
+        Button.setAttribute('id',this.Id)
+        Button.setAttribute('class','nav-btn')
+        return Button;
     }
 }
 
