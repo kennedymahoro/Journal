@@ -1,4 +1,3 @@
-"use strict";
 const Nav = document.querySelector('nav');
 const Input_title = document.querySelector('data-main-input-title');
 const Display_time = document.querySelector('data-display-time');
@@ -23,3 +22,4 @@ class NewButton {
     }
 }
 Save_btn.addEventListener('click', () => void {});
+export {};

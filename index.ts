@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from './node_modules/uuid';
-
 const Nav:HTMLElement = document.querySelector('nav') as HTMLElement;
 const Input_title:HTMLInputElement = document.querySelector('data-main-input-title') as HTMLInputElement;
 const Display_time:HTMLHeadElement = document.querySelector('data-display-time') as HTMLHeadElement;
